@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q2lteih!z6_a*hv1doo5q1vi*hq$kk#k4n5#3%nm0vu*#vtz73'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [".herokuapp.com", ]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -150,3 +150,4 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
